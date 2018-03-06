@@ -36,11 +36,14 @@ import random
 '''
 ad_id = []
 mileage = []
-
 transmission = ['manual', 'automatic']
+
 fuel_type = ['gasoline','diesel','naft', 'ethanol', 'biodiesel', 'electricity']
-engine_cc = [1500,2000, 2500, 3000, 3500, 4000]
+
+engine_cc = ["1500", "2000", "2500", "3000", "3500", "4000"]
 build_year = ["2017-10-25", "2017-05-17", "2014-09-25", "2013-03-21", "2012-06-27", "2011-09-30", "2003-12-31","2017-06-27"]
+
+
 created_at = '2017-08-12 11:58:05'
 updated_at = '2017-08-12 11:58:05'
 
@@ -49,3 +52,8 @@ for i in range (1, 20):
     mileage.append(i * 10000)
 
 print("INSERT INTO `cars_vehicles` (`id`, `ad_id`, `transmission`, `fuel_type`, `engine_cc`, `mileage`, `build_year`, `created_at`, `updated_at`) VALUES")
+
+for j in range(12, 1000):
+
+    print('(\'', str(j) + '\',\'' + str(ad_id[random.randint(0,18)])  + '\',\'' + str(transmission[random.randint(0, len(transmission) - 1)]) + '\',\'' + str(fuel_type[random.randint(0, len(fuel_type) - 1)]) +
+          '\',\'' + str(engine_cc[random.randint(0,5)]) + '\',\'' + str(build_year[random.randint(0, 7)]) + '\');')
