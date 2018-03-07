@@ -56,4 +56,4 @@ print("INSERT INTO `cars_vehicles` (`id`, `ad_id`, `brand`,`transmission`, `fuel
 for j in range(2, 1000):
 
     print( '(' + str(j) + ',' + str(ad_id[random.randint(0,18)])  + ',\'' + str(brand[random.randint(0, len(transmission) - 1)]) + '\',\'' + str(transmission[random.randint(0, len(transmission) - 1)]) + '\',\'' + str(fuel_type[random.randint(0, len(fuel_type) - 1)]) +
-          '\',\'' + str(engine_cc[random.randint(0,5)]) + '\',\'' + str(build_year[random.randint(0, 7)]) + '\',\'' + created_at +'\',\'' + updated_at + '\'),')
+          '\',\'' + str(engine_cc[random.randint(0,5)]) + '\',\'' + str(mileage[random.randint(0, len(transmission) - 1)]) + '\',\'' + str(build_year[random.randint(0, 7)]) + '\',\'' + created_at +'\',\'' + updated_at + '\'),')
